@@ -1,0 +1,13 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+  background: #f8f9fb;
+}
+
+#root {
+  min-height: 100vh;
+}
