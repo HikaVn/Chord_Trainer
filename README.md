@@ -1,16 +1,33 @@
-# React + Vite
+# Chord Trainer (ウクレレコード変換)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GitHub Pages 公開先:
+- https://hikavn.github.io/Chord_Trainer/
 
-Currently, two official plugins are available:
+## ローカル開発
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+表示された URL（通常 `http://localhost:5173`）で確認できます。
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 本番ビルド
 
-## Expanding the ESLint configuration
+```bash
+npm run build
+npm run preview
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+`vite.config.js` で build 時の `base` を `/Chord_Trainer/` にしているため、
+GitHub Pages のプロジェクトページ配下でもアセットが正しく解決されます。
+
+## GitHub Pages デプロイ
+
+このリポジトリには GitHub Actions で `main`（または `master`）ブランチへ
+**push（= ローカルのコミットを GitHub に送信）**したときに
+`dist/` を Pages へデプロイする workflow (`.github/workflows/deploy.yml`) を含めています。
+
+1. GitHub リポジトリの **Settings → Pages** を開く
+2. **Build and deployment** の Source を **GitHub Actions** にする
+3. `git push origin main`（または `git push origin master`）で自動公開されます
