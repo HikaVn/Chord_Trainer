@@ -218,6 +218,15 @@ export default function App() {
 
       <footer className="footer">
         <p>標準チューニング: G-C-E-A ｜ 数字は各弦のフレット番号（0=開放弦）</p>
+        <p>
+          <a
+            href="https://hikavn.github.io/Chord_Trainer/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://hikavn.github.io/Chord_Trainer/
+          </a>
+        </p>
       </footer>
     </div>
   );
